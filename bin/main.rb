@@ -5,10 +5,18 @@ require 'tty-box'
 puts "Welcome to the Ruby's Tic-Tac-Toe Game!\n"
 
 puts "Enter the first player's name:"
-player1 = gets.chomp
+player1 = ''
+while player1.empty?
+  player1 = gets.chomp
+  puts 'Invalid name. Name must not be empty' if player1.empty?
+end
 
 puts "Enter the second players's name:"
-player2 = gets.chomp
+player2 = ''
+while player2.empty?
+  player2 = gets.chomp
+  puts 'Invalid name. Name must not be empty' if player2.empty?
+end
 
 players = [player1, player2]
 
