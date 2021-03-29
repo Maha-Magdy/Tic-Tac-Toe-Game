@@ -20,14 +20,13 @@ class Board
    end
 
    def check_winner(player)
-      player.each do |move|
-         winner_count = 0
-         @@win.each do |win_combination|
-            winner_count += 1 if win_combination.include?(move)
-            break if winner_count == 3
+      @@win.each do |win_combination| # [1, 2, 3]
+         winner_count = 0 # 0
+         win_combination.each do |move| # 1
+            winner_count += 1 if player.include?(move)
          end
          return true if winner_count == 3
-         false
       end
+      false
    end
 end
