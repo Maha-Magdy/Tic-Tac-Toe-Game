@@ -62,13 +62,20 @@ while i < 9
   system 'clear'
   system 'cls'
 
+=begin
   if i == rand(9)
     puts box
     win(player.name)
     break
   end
-
+=end
   i += 1
+
+  if board.check_winner(player.player_moves)
+    puts "#{player.name} WINS!!!" 
+    break
+  end
+
 end
 
 if i == 9
