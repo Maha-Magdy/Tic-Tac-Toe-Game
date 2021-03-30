@@ -9,7 +9,7 @@ i = 0
 def new_game
   system 'clear'
   system 'cls'
-  system "bin/main.rb"
+  system 'bin/main.rb'
   exit
 end
 
@@ -22,7 +22,8 @@ end
 def play_again
   puts "Press 'yes' if you want to play another game and 'no' if you don't"
   answer = gets.chomp
-  return new_game if answer == "yes"
+  return new_game if answer == 'yes'
+
   end_game
 end
 
