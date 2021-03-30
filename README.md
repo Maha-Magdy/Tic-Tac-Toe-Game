@@ -9,7 +9,7 @@
 
 ## Game Rules
 
-<img src="./game-picture.png" width="400">
+<img src="./game-picture.png" width="300">
 
 Tic Tac Toe is a game whose main objective is to complete a row, column, or diagonal with the same symbol. Players take turns placing different symbols ("X" or "O") on the board, and the first that completes a row, column, or diagonal, wins. If no one completes them, then the game ends as a "Tie".
 
