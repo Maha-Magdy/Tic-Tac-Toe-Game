@@ -14,7 +14,7 @@ player2 = Player.new(gets.chomp)
 
 players = [player1, player2]
 
-puts "#{player1.name} is going to play as X and #{player2.name} is going to play as O!"
+puts "#{player1.player[:name]} is going to play as #{player1.player[:mark]} and #{player2.player[:name]} is going to play as #{player2.player[:mark]}!"
 
 puts "Let's start! (Press ENTER)"
 
@@ -23,32 +23,17 @@ gets
 system 'clear'
 system 'cls'
 
-box = TTY::Box.frame '+---+---+---+',
-                     '| 1 | 2 | 3 |',
-                     '+---+---+---+',
-                     '| 4 | 5 | 6 |',
-                     '+---+---+---+',
-                     '| 7 | 8 | 9 |',
-                     '+---+---+---+',
-                     padding: 1, align: :center
+board = Board.new
 
 def tie
-  puts "IT'S A TIE!\n"
-  puts 'Game Over'
+  puts TTY::Box.frame "IT'S A TIE!\nGame Over", padding: 2, align: :center
 end
 
-def win(player)
-  puts "#{player} you WIN the game!"
-end
-
-board = Board.new
 i = 0
 while i < 9
-
-  puts box
-
+  puts board.draw_the_board()
   player = players[i % 2]
-  puts "It's #{player.name}'s turn!\n"
+  puts "It's #{player.player[:name]}'s turn!\n"
 
   puts 'Please select an available cell from the board.'
   received_number = ''
@@ -59,30 +44,22 @@ while i < 9
   end
   player.add_moves(received_number)
   board.add_moves(received_number)
+  board.grid[received_number - 1] = player.player[:mark]
+  puts "this the value #{board.grid[received_number - 1]}"
   system 'clear'
   system 'cls'
 
-=begin
-  if i == rand(9)
-    puts box
-    win(player.name)
-    break
-  end
-=end
   i += 1
 
   if board.check_winner(player.player_moves)
-    puts "#{player.name} WINS!!!" 
+    puts board.draw_the_board()
+    puts TTY::Box.frame "#{player.player[:name]} you WIN the game!\n", padding: 2
     break
   end
 
 end
 
 if i == 9
-  puts box
+  puts board.draw_the_board()
   tie
 end
-
-puts "board #{board.whole_moves}"
-puts "player1 #{player1.player_moves}"
-puts "player2 #{player2.player_moves}"

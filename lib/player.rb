@@ -1,8 +1,9 @@
 class Player
-    attr_reader :name, :player_moves
+    attr_reader :name, :player_moves, :mark, :player
+    @@marks = ["X", "O"]
 
     def initialize(name)
-        @name = name
+        @player = {name: name, mark: @@marks.shift}
         @player_moves = []
     end
 

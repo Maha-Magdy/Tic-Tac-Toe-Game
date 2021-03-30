@@ -1,5 +1,9 @@
+require 'tty-box'
+
 class Board
    attr_reader :whole_moves
+   attr_reader :grid
+   attr_reader :box
    @@win = [
       [1, 2, 3],
       [4, 5, 6],
@@ -13,6 +17,7 @@ class Board
 
    def initialize
      @whole_moves = []
+     @grid = [1, 2, 3, 4, 5, 6, 7, 8, 9]
    end
 
    def add_moves(move_number)
@@ -28,5 +33,16 @@ class Board
          return true if winner_count == 3
       end
       false
+   end
+
+   def draw_the_board
+      @box = TTY::Box.frame '+---+---+---+',
+                     "| #{@grid[0]} | #{@grid[1]} | #{@grid[2]} |",
+                     '+---+---+---+',
+                     "| #{@grid[3]} | #{@grid[4]} | #{@grid[5]} |",
+                     '+---+---+---+',
+                     "| #{@grid[6]} | #{@grid[7]} | #{@grid[8]} |",
+                     '+---+---+---+',
+                     padding: 1, align: :center
    end
 end
