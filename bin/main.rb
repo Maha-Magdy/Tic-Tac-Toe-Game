@@ -71,7 +71,10 @@ while i < 9
 =end
   i += 1
 
-  puts "#{player.name} WINS!!!" if board.check_winner(player.player_moves)
+  if board.check_winner(player.player_moves)
+    puts "#{player.name} WINS!!!" 
+    break
+  end
 
 end
 
