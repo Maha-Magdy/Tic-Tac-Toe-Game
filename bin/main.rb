@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'tty-box'
-require_relative '../lib/player.rb'
-require_relative '../lib/board.rb'
+require_relative '../lib/player'
+require_relative '../lib/board'
 
 puts "Welcome to the Ruby's Tic-Tac-Toe Game!\n"
 
