@@ -19,6 +19,10 @@ To get a local copy up and running follow these simple example steps.
 
 git clone https://github.com/Maha-Magdy/Tic-Tac-Toe-Game.git
 
+### To have all gem files installed in your machine:
+
+You must run bundle in your terminal.
+
 ## Authors
 
 👤**Maha Magdy**
