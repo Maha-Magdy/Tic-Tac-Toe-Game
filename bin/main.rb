@@ -68,5 +68,5 @@ end
 
 if i == 9
   puts board.draw_the_board
-  tie
+  board.check_winner(player.player_moves) ? win(player, board) : tie
 end
