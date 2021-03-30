@@ -4,6 +4,29 @@ require 'tty-box'
 require_relative '../lib/player'
 require_relative '../lib/board'
 
+i = 0
+
+def new_game
+  system 'clear'
+  system 'cls'
+  system 'bin/main.rb'
+  exit
+end
+
+def end_game
+  system 'clear'
+  system 'cls'
+  exit
+end
+
+def play_again
+  puts "Press 'yes' if you want to play another game and 'no' if you don't"
+  answer = gets.chomp
+  return new_game if answer == 'yes'
+
+  end_game
+end
+
 puts "Welcome to the Ruby's Tic-Tac-Toe Game!\n"
 
 puts "Enter the first player's name:"
@@ -35,7 +58,6 @@ def win(player, board)
   puts TTY::Box.frame "#{player.player[:name]} you WIN the game!\n", padding: 2
 end
 
-i = 0
 while i < 9
   puts board.draw_the_board
   player = players[i % 2]
@@ -61,12 +83,13 @@ while i < 9
 
   if board.check_winner(player.player_moves)
     win(player, board)
-    break
+    play_again
   end
 
 end
 
 if i == 9
   puts board.draw_the_board
-  tie
+  board.check_winner(player.player_moves) ? win(player, board) : tie
+  play_again
 end
