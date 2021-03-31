@@ -7,9 +7,11 @@
 - Ruby
 - Repl
 
-## Live Demo
+## Game Rules
 
-[Live Demo Link]()
+<img src="./game-picture.png" width="250">
+
+Tic Tac Toe is a game whose main objective is to complete a row, column, or diagonal with the same symbol. Players take turns placing different symbols ("X" or "O") on the board, and the first that completes a row, column, or diagonal, wins. If no one completes them, then the game ends as a "Tie".
 
 ## Getting Started
 
@@ -22,6 +24,15 @@ git clone https://github.com/Maha-Magdy/Tic-Tac-Toe-Game.git
 ### To have all gem files installed in your machine:
 
 You must run bundle in your terminal.
+
+## Game Instructions
+
+- Run `bin/main.rb` in the Terminal
+- Enter the first player's name
+- Enter the second player's name
+- Press Enter to start the game
+- Each player must enter a number from 1-9 that's not already placed on the board
+- The game finishes when all places are filled ("TIE") or when a row, column, or diagonal is filled up.
 
 ## Authors
 
