@@ -22,27 +22,27 @@ describe Board do
 
   describe '#draw_the_board' do
     initial_box = TTY::Box.frame '+---+---+---+',
-    '| 1 | 2 | 3 |',
-    '+---+---+---+',
-    '| 4 | 5 | 6 |',
-    '+---+---+---+',
-    '| 7 | 8 | 9 |',
-    '+---+---+---+',
-    padding: 1, align: :center
+                                 '| 1 | 2 | 3 |',
+                                 '+---+---+---+',
+                                 '| 4 | 5 | 6 |',
+                                 '+---+---+---+',
+                                 '| 7 | 8 | 9 |',
+                                 '+---+---+---+',
+                                 padding: 1, align: :center
 
-    it 'draws a tic tac toe board' do 
+    it 'draws a tic tac toe board' do
       expect(board.draw_the_board).to eql(initial_box)
     end
   end
 end
 
 describe Player do
-  let(:player) {Player.new('Maha', 'X')}
+  let(:player) { Player.new('Maha', 'X') }
   describe '#add_moves' do
-    it  'add the input number inside player_moves array' do
+    it 'add the input number inside player_moves array' do
       player_move = 5
       player.add_moves(player_move)
-      expect(player.player_moves).to include player_move  
+      expect(player.player_moves).to include player_move
     end
   end
 end
