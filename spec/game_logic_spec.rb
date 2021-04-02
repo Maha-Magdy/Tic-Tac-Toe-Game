@@ -18,6 +18,9 @@ describe Board do
       board.add_moves(added_move)
       expect(board.whole_moves).to include added_move
     end
+    it 'the input number doesn\'t add inside whole_moves array, and returns an error' do
+      expect { board.add_moves() }.to raise_error(ArgumentError)
+    end
   end
 
   describe '#draw_the_board' do
@@ -43,6 +46,9 @@ describe Player do
       player_move = 5
       player.add_moves(player_move)
       expect(player.player_moves).to include player_move
+    end
+    it 'the input number doesn\'t add inside player_moves array, and returns an error' do
+      expect { player.add_moves() }.to raise_error(ArgumentError)
     end
   end
 end
