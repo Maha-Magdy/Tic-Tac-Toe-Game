@@ -1,7 +1,7 @@
 require 'tty-box'
 
 class Board
-  attr_reader :whole_moves, :grid,:box
+  attr_reader :whole_moves, :grid, :box
 
   def initialize
     @whole_moves = []
