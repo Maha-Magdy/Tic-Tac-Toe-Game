@@ -26,6 +26,10 @@ git clone https://github.com/Maha-Magdy/Tic-Tac-Toe-Game.git
 
 You must run bundle in your terminal.
 
+### To run the TDD in your machine:
+
+You must run rspec in your terminal.
+
 ## Game Instructions
 
 - Run `bin/main.rb` in the Terminal
