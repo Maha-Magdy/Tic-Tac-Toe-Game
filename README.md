@@ -1,11 +1,12 @@
 # Tic-Tac-Toe-Game
 
-> In this Project, we worked on building our own Tic-Tac-Toe Game in ruby.
+> In this project, we worked on building our own Tic-Tac-Toe Game in ruby, and we make test-driven development (TDD) using the RSpec testing framework.
 
 ## Built With
 
 - Ruby
 - Repl
+- RSpec
 
 ## Game Rules
 
@@ -25,6 +26,10 @@ git clone https://github.com/Maha-Magdy/Tic-Tac-Toe-Game.git
 
 You must run bundle in your terminal.
 
+### To run the TDD in your machine:
+
+You must run rspec in your terminal.
+
 ## Game Instructions
 
 - Run `bin/main.rb` in the Terminal
@@ -43,9 +48,17 @@ You must run bundle in your terminal.
 - LinkedIn: [Maha Magdy](https://www.linkedin.com/in/maha-magdy-18a8a7116/)
 
 👤 **Arthur Borges**
+
 - GitHub: [@arthurborgesdev](https://github.com/arthurborgesdev)
 - Twitter: [@arthurmoises](https://twitter.com/arthurmoises)
 - LinkedIn: [Arthur Borges](https://www.linkedin.com/in/arthurmoises)
+
+👤 **João Vítor Montanholi Nunes**
+
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+
 
 ## 🤝 Contributing
 
